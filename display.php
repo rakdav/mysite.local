@@ -3,12 +3,8 @@
 //    $surname=$_POST["lastname"];
 //    echo "Ваше имя:".$name." фамилия ".$surname;
 
-if(isset($_POST["var1"])&&isset($_POST["var2"])){
-    $var1= $_POST["var1"];
-    $var2= $_POST["var2"];
-    $sum=$var1+$var2;
-    $multiplication=$var1*$var2;
-    echo $var1."+".$var2."=".$sum;
-    echo "<br>";
-    echo $var1."*".$var2."=".$multiplication;
+if(isset($_POST["x"])){
+    $x= $_POST["x"];
+    $y=sinh($x)*tan($x+1)-pow(tan(2+sinh($x-1)),2);
+    printf("y=%.2f",$y);
 }

@@ -10,11 +10,8 @@
 <body>
     <h2>Введи свои данные</h2>
     <form action="display.php" method="post">
-        <p>Введите значение 1:<label>
-                <input type="number" name="var1"/>
-            </label></p>
-        <p>Введите значение 2:<label>
-                <input type="number" name="var2"/>
+        <p>Введите x:<label>
+                <input type="number" name="x"/>
             </label></p>
         <input type="submit" value="Отправить">
     </form>
