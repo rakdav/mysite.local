@@ -1,0 +1,22 @@
+<?php
+if(isset($_POST["mas1"])&&isset($_POST["mas2"])){
+    $strX=$_POST["mas1"];
+    $strY=$_POST["mas2"];
+    $mas1=[];
+    for($i=0;$i<strlen($strX);$i++){
+        $mas1[$i]=$strX[$i];
+    }
+    $mas2=[];
+    for($i=0;$i<strlen($strY);$i++){
+        $mas2[$i]=$strY[$i];
+    }
+    $x=0;
+    for($i=count($mas1)-1;$i>=0;$i--){
+        $x+=(int)$mas1[$i]*2**(count($mas1)-1-$i);
+    }
+    $y=0;
+    for($i=count($mas2)-1;$i>=0;$i--){
+        $y+=(int)$mas2[$i]*2**(count($mas2)-1-$i);
+    }
+    echo $x . "+" . $y . ("=" . ($x + $y));
+}
