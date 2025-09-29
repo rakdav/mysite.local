@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+<h1>Задача №1</h1>
 <h3>Введите последовательность нулей и единиц:</h3>
 <form action="onemass.php" method="post">
     <p>Введите первое число:<label>
@@ -20,6 +21,17 @@
     <p>
     <input type="submit" value="Отправить">
 </form>
+<form action="twomass.php" method="post">
+    <p>Введите количество строк:<label>
+            <input type="number" name="n"/>
+        </label>
+    <p>Введите количество столбцов:<label>
+            <input type="number" name="m"/>
+        </label>
+    <p>
+        <input type="submit" value="Отправить">
+</form>
+<h1>Задача №2</h1
 <!--    <h2>Введи свои данные</h2>-->
 <!--    <form action="display.php" method="post">-->
 <!--        <p>Введите x:<label>-->
