@@ -21,7 +21,7 @@
     <p>
         <input type="submit" value="Отправить">
 </form>
-<h1>Задача №2</h1
+<h1>Задача №2</h1>
 <form action="twomass.php" method="post">
     <p>Введите количество строк:<label>
             <input type="number" name="n"/>
@@ -31,6 +31,24 @@
         </label>
     <p>
         <input type="submit" value="Отправить">
+</form>
+<h1>Передача массива</h1>
+<form action="sendmass.php" method="post">
+    <p>Введите 1 элемент:<label>
+            <input type="text" name="users[first]"/>
+        </label>
+    </p>
+    <p>Введите 2 элемент:<label>
+            <input type="text" name="users[second]"/>
+        </label>
+    </p>
+    <p>Введите 3 элемент:<label>
+            <input type="text" name="users[third]"/>
+        </label>
+    </p>
+    <p>
+        <input type="submit" value="Отправить">
+    </p>
 </form>
 </body>
 </html>

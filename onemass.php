@@ -11,8 +11,9 @@
 <body>
 <?php
 if(isset($_POST["mas1"])&&isset($_POST["mas2"])){
-    $strX=$_POST["mas1"];
-    $strY=$_POST["mas2"];
+    $strX=strip_tags($_POST["mas1"]);
+    $strY=htmlentities($_POST["mas2"]);
+    echo $strX;
     $mas1=[];
     for($i=0;$i<strlen($strX);$i++){
         $mas1[$i]=$strX[$i];
