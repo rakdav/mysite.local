@@ -12,8 +12,8 @@
 <h3>Выберите вариант задания</h3>
 <a href="first.php">Лабораторная работа №1</a><br>
 <a href="second.php">Лабораторная работа №2</a><br>
-<a href="third.php">Лабораторная работа №3</a>
-
+<a href="third.php">Лабораторная работа №3</a><br>
+<a href="four.php">Лабораторная работа №4</a>
 
 <!--    <h2>Введи свои данные</h2>-->
 <!--    <form action="display.php" method="post">-->
@@ -76,8 +76,126 @@
 //echo "<br>";
 
 //двумерный массив
+//Анонимные функции
 
-//?>
+$hello=function ($name){
+    echo "<h2>Hello $name!</h2>";
+};
+$sum=function ($x,$y){
+  return $x+$y;
+};
+function sum($mas,$condition)
+{
+    $result=0;
+    foreach ($mas as $number) {
+        if($condition($number)){
+            $result+=$number;
+        }
+    }
+    return $result;
+}
+//$hello("Tom");
+//echo $sum(6,9);
+$isEvenNumber=function ($n){return $n%2==0;};
+$mas=[];
+for($i=0;$i<10;$i++){
+    $mas[]=rand(0,10);
+}
+//echo "<p>".sum($mas,$isEvenNumber);
+//Замыкания
+//Замыкания в PHP представляют анонимную функцию,
+//которая может использовать переменные из своего локального окружения
+$number=89;
+$showNumber=function () use ($number){
+    echo $number;
+};
+//echo "<p>";
+//$showNumber();
+$a=8;
+$b=10;
+//$closure=function ($c) use ($a,$b){
+//    return $a+$b+$c;
+//};
+//echo "<p>";
+//echo $closure(5);
+//Стрелочные функции
+//Стрелочные функции (arrow function) позволяют
+// упростить запись анонимных функций, которые возвращают некоторое значение
+//$closure=fn($c)=>$a+$b+$c;
+
+//Работа со строками
+echo "<p>";
+$str1=" Привет, мир! ";
+$str2="мир";
+$s=<<<LABEL
+Hello world!
+By world!
+LABEL;
+//echo $s;
+//echo $str1[4]."<p>";
+//$position=strpos($str1,$str2);
+//$position=mb_strpos($str1,$str2);
+//if($position!==false){
+//    echo "Позиция подстроки $str2 в строке $str1 начинается с индекса $position";
+//}
+//echo "<p>".mb_strrpos($str1,$str2);
+//echo "<p>".trim($str1);
+//echo "<p>".mb_strtolower($str1);
+//echo "<p>".mb_strlen($str1);
+//echo "<p>".mb_substr($str1,3);
+//echo "<p>".mb_substr($str1,3,5);
+//echo "<p>".str_replace("мир","Ваня",$str1);
+
+//Работа с cookie
+//bool setcookie(string $name, string $value, int $expire,
+//    string $path, string $domain, bool $secure, bool $httponly)
+//name: имя cookie, которое будет использоваться для доступа к его значению
+//value: значение или содержимое cookie - любой алфавитно-цифровой текст не более 4 кБайт
+//expire (необязательный параметр): срок действия в секундах, после которого cookie уничтожаются.
+//path (необязательный параметр): путь к каталогу на сервере, для которого будут доступны cookie.
+//domain (необязательный параметр): задает домен, для которого будут доступны cookie.
+//secure (необязательный параметр): указывает на то, что значение cookie должно передаваться по протоколу HTTPS
+//httponly (необязательный параметр): если равно true, cookie будут доступны только через http протокол.
+
+//$name="Tom";
+//$age=45;
+//setcookie("name",$name);
+//setcookie("age",$age,time()+3600);
+
+//if(isset($_COOKIE["name"])) echo "Имя:".$_COOKIE["name"];
+//if(isset($_COOKIE["age"])) echo "Возраст:".$_COOKIE["age"];
+
+//setcookie("lang[1]","Никакой");
+//setcookie("lang[2]","Пофигистический");
+//setcookie("lang[3]","Матерный жаргон индейцев Майя");
+
+//if(isset($_COOKIE["lang"])){
+//    foreach($_COOKIE["lang"] as $lang=>$value){
+//        $name=htmlspecialchars($lang);
+//        $value=htmlspecialchars($value);
+//        echo "<br>".$name.": ".$value;
+//    }
+//}
+//setcookie("name","",time()-3600);
+
+//Сессии
+session_start();
+//echo session_id()."<br>";
+//echo session_name()."<br>";
+//echo $_COOKIE["PHPSESSID"]."<br>";
+
+//$_SESSION["name"]="Tom";
+//$_SESSION["age"]="19";
+
+//if(isset($_SESSION["name"])&&isset($_SESSION["age"])){
+//    $name=$_SESSION["name"];
+//    $age=$_SESSION["age"];
+//    echo "<p>Hello $name. $age!</p>";
+//}
+
+//unset($_SESSION["age"])
+session_destroy();
+?>
 
 <!--</table>-->
 </body>
