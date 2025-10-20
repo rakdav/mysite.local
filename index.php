@@ -13,7 +13,8 @@
 <a href="first.php">Лабораторная работа №1</a><br>
 <a href="second.php">Лабораторная работа №2</a><br>
 <a href="third.php">Лабораторная работа №3</a><br>
-<a href="four.php">Лабораторная работа №4</a>
+<a href="four.php">Лабораторная работа №4</a><br>
+<a href="five.php">Лабораторная работа №5</a>
 
 <!--    <h2>Введи свои данные</h2>-->
 <!--    <form action="display.php" method="post">-->
@@ -23,7 +24,13 @@
 <!--        <input type="submit" value="Отправить">-->
 <!--    </form>-->
 <!--<table border="1">-->
+<!--<h1>Лабораторные работы</h1>-->
+<!--<details id="details1">-->
+<!--    <summary>Lab1</summary>-->
+<!--    <details id="details1.1">-->
+<!--        <summary>1.2. Программирование линейных алгоритмов | Вариант:6 | Высокий уровень</summary>-->
 <?php
+
 //    $Families=[["Tom","Alice"],["Bob","Kate"]];
 //    foreach($Families as $Family){
 //        echo "<tr>";
@@ -78,41 +85,41 @@
 //двумерный массив
 //Анонимные функции
 
-$hello=function ($name){
-    echo "<h2>Hello $name!</h2>";
-};
-$sum=function ($x,$y){
-  return $x+$y;
-};
-function sum($mas,$condition)
-{
-    $result=0;
-    foreach ($mas as $number) {
-        if($condition($number)){
-            $result+=$number;
-        }
-    }
-    return $result;
-}
-//$hello("Tom");
-//echo $sum(6,9);
-$isEvenNumber=function ($n){return $n%2==0;};
-$mas=[];
-for($i=0;$i<10;$i++){
-    $mas[]=rand(0,10);
-}
-//echo "<p>".sum($mas,$isEvenNumber);
-//Замыкания
-//Замыкания в PHP представляют анонимную функцию,
-//которая может использовать переменные из своего локального окружения
-$number=89;
-$showNumber=function () use ($number){
-    echo $number;
-};
-//echo "<p>";
-//$showNumber();
-$a=8;
-$b=10;
+//$hello=function ($name){
+//    echo "<h2>Hello $name!</h2>";
+//};
+//$sum=function ($x,$y){
+//  return $x+$y;
+//};
+//function sum($mas,$condition)
+//{
+//    $result=0;
+//    foreach ($mas as $number) {
+//        if($condition($number)){
+//            $result+=$number;
+//        }
+//    }
+//    return $result;
+//}
+////$hello("Tom");
+////echo $sum(6,9);
+//$isEvenNumber=function ($n){return $n%2==0;};
+//$mas=[];
+//for($i=0;$i<10;$i++){
+//    $mas[]=rand(0,10);
+//}
+////echo "<p>".sum($mas,$isEvenNumber);
+////Замыкания
+////Замыкания в PHP представляют анонимную функцию,
+////которая может использовать переменные из своего локального окружения
+//$number=89;
+//$showNumber=function () use ($number){
+//    echo $number;
+//};
+////echo "<p>";
+////$showNumber();
+//$a=8;
+//$b=10;
 //$closure=function ($c) use ($a,$b){
 //    return $a+$b+$c;
 //};
@@ -124,13 +131,13 @@ $b=10;
 //$closure=fn($c)=>$a+$b+$c;
 
 //Работа со строками
-echo "<p>";
-$str1=" Привет, мир! ";
-$str2="мир";
-$s=<<<LABEL
-Hello world!
-By world!
-LABEL;
+//echo "<p>";
+//$str1=" Привет, мир! ";
+//$str2="мир";
+//$s=<<<LABEL
+//Hello world!
+//By world!
+//LABEL;
 //echo $s;
 //echo $str1[4]."<p>";
 //$position=strpos($str1,$str2);
@@ -179,7 +186,7 @@ LABEL;
 //setcookie("name","",time()-3600);
 
 //Сессии
-session_start();
+//session_start();
 //echo session_id()."<br>";
 //echo session_name()."<br>";
 //echo $_COOKIE["PHPSESSID"]."<br>";
@@ -194,8 +201,9 @@ session_start();
 //}
 
 //unset($_SESSION["age"])
-session_destroy();
+//session_destroy();
 ?>
+
 
 <!--</table>-->
 </body>
