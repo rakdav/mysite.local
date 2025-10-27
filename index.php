@@ -14,7 +14,8 @@
 <a href="second.php">Лабораторная работа №2</a><br>
 <a href="third.php">Лабораторная работа №3</a><br>
 <a href="four.php">Лабораторная работа №4</a><br>
-<a href="five.php">Лабораторная работа №5</a>
+<a href="five.php">Лабораторная работа №5</a><br>
+<a href="six.php">Лабораторная работа №6</a>
 
 <!--    <h2>Введи свои данные</h2>-->
 <!--    <form action="display.php" method="post">-->
